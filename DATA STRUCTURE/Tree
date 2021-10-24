@@ -1,0 +1,166 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct Node
+{
+	int value;
+	Node *left=NULL , *right=NULL;
+};
+void inorder_triversal(Node* root)
+{
+	if(root==NULL) return;
+	inorder_triversal(root->left);
+	cout<<root->value<<" ";
+	inorder_triversal(root->right);
+}
+
+void preorder_triversal(Node* root)
+{
+	if(root==NULL) return;
+	cout<<root->value<<" ";
+	preorder_triversal(root->left);
+	preorder_triversal(root->right);
+}
+
+void iterativeInorder(Node* root)
+{
+    stack <Node*> s;
+    if(root)s.push(root);
+    while(s.size())
+    {
+        Node* a=s.top();
+        if(a->left)
+        {
+            s.push(a->left);
+            a->left=NULL;
+        }
+        else
+        {
+            cout<<a->value<<" ";
+            s.pop();
+            if(a->right)s.push(a->right);
+        }
+    }
+    cout<<endl;
+}
+void iterativePreorder(Node* root)
+{
+    stack <Node*> s;
+    if(root)s.push(root);
+    while(s.size())
+    {
+        Node* a=s.top();
+        s.pop();
+        cout<<a->value<<" ";
+        if(a->right)s.push(a->right);
+        if(a->left)s.push(a->left);
+    }
+    cout<<endl;
+}
+void postorder_triversal(Node* root)
+{
+	if(root==NULL) return;
+	postorder_triversal(root->left);
+	postorder_triversal(root->right);
+	cout<<root->value<<" ";
+}
+void BFS(Node* root)
+{
+	queue<Node*> q;
+	if(root)q.push(root);
+	while(q.size())
+	{
+		Node* a = q.front();
+		q.pop();
+		cout<<a->value<<" ";
+		if(a->left)q.push(a->left);
+		if(a->right)q.push(a->right);
+
+	}
+	cout<<endl;
+}
+void BFS_with_spacing(Node* root)
+{
+	queue<Node*> q;
+	if(root)q.push(root);
+	while(q.size())
+	{
+		int siz=q.size();
+		while(siz--)
+        {
+            Node* a = q.front();
+            q.pop();
+            cout<<a->value<<" ";
+            if(a->left)q.push(a->left);
+            if(a->right)q.push(a->right);
+        }
+        cout<<endl;
+	}
+    cout<<endl;
+}
+void find_leafnode(Node* root)
+{
+	if(root==NULL) return;
+	if(root->left==NULL && root->right==NULL)
+	{
+		cout<<root->value<<" ";
+	}
+	find_leafnode(root->left);
+	find_leafnode(root->right);
+}
+int height(Node* root)
+{
+	if(root == NULL) return 0;
+	int heightleft = height(root->left);
+	int heightright = height(root->right);
+	return max(heightleft,heightright)+1;
+}
+void inversion(Node* root)
+{
+	if(root == NULL) return;
+	swap(root->left,root->right);
+	inversion(root->right);
+	inversion(root->left);
+	//inversion(root->right);
+}
+int main()
+{
+	Node* root = new Node;
+	root->value=1;
+	Node* node1 = new Node;
+	node1->value=2;
+	Node* node2 = new Node;
+	node2->value=3;
+	root->left=node1;
+	root->right=node2;
+	Node* node3 = new Node;
+	node3->value=4;
+	Node* node4 = new Node;
+	node4->value=5;
+	node1->left=node3;
+	node1->right=node4;
+	Node* node5 = new Node;
+	node5->value=6;
+	node2->right=node5;
+	cout<<"Inorder Triversal:"<<endl;
+	inorder_triversal(root);
+	cout<<"\nPreorder Triversal:"<<endl;
+	preorder_triversal(root);
+	cout<<"\nPostorder Triversal:"<<endl;
+	postorder_triversal(root);
+	cout<<"\nHeight : "<<height(root)<<endl;
+	cout<<"Preorder Triversal after Inversal:"<<endl;
+	inversion(root);
+	preorder_triversal(root);
+	inversion(root);
+	cout<<"\nLeaf Nodes of the Tree:"<<endl;
+	find_leafnode(root);
+	cout<<"\nBFS:"<<endl;
+	BFS(root);
+	cout<<"\nBFS according to the Levels:"<<endl;
+	BFS_with_spacing(root);
+	cout<<"\nPreorder Triversal using Iterative Method:"<<endl;
+	iterativePreorder(root);
+	cout<<"\nInorder Triversal using Iterative Method:"<<endl;
+	iterativeInorder(root);
+
+}
