@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int m[5][5];
+void clearGraph()
+{
+    memset(m,0,sizeof m);
+}
+void addEdge(int s,int d)
+{
+    m[s][d]=1;
+    m[d][s]=1;
+}
+void deleteEdge(int s,int d)
+{
+    m[s][d]=0;
+    m[d][s]=0;
+}
+int main()
+{
+    clearGraph();
+    addEdge(1,2);
+    addEdge(1,3);
+    addEdge(2,3);
+    addEdge(2,4);
+    for(int i=0;i<5;i++)
+    {
+        for(int j=0;j<5;j++)
+        {
+            cout<<i<<" "<<j<<" "<<m[i][j]<<"  ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
