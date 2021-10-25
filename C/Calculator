@@ -1,0 +1,72 @@
+//calculator
+
+#include<stdio.h>
+main()
+{
+	int n;
+	char man;
+	do
+	{
+		printf("\n Select any option \n");
+		printf("Enter 1 for Addition \n");
+		printf("Enter 2 for Difference \n");
+		printf("Enter 3 for Multiplication \n");
+		printf("Enter 4 for division \n");
+		printf("Enter 5 to exit \n");
+		scanf("%d",&n);
+		
+		switch(n)
+		{
+			case 1:
+				{
+					int a,b,c;
+					printf("\n Enter two numbers: ");
+					scanf("%d\n%d",&a,&b);
+					c=a+b;
+					printf("\n sum is: %d",c);
+				break;
+				}
+			
+			case 2:
+				{
+					int d,e,f;
+					printf("\n Enter two numbers: ");
+					scanf("%d\n%d",&d,&e);
+					f=d-e;
+					printf("\n difference is: %d",f);
+				break;
+				}
+				
+			case 3:
+				{
+					int g,h,i;
+					printf("\n Enter two numbers: ");
+					scanf("%d\n%d",&g,&h);
+					i=g*h;
+					printf("\n product is: %d",i);
+				break;
+				}
+				
+			case 4:
+				{
+					float j,k,l;
+					printf("\n Enter two numbers: ");
+					scanf("%f\n%f",&j,&k);
+					l=j/k;
+					printf("\n division is %f:",l);
+				break;
+				}
+			
+			case 5:
+				break;
+				
+			default :
+				{
+					printf("enter the corect option\n");	
+				}
+				
+			}	
+	}
+	while(n!=5);
+	
+}
