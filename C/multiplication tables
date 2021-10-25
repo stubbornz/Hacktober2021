@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int t,l,k=1,v;
+	printf("Enter what table you want to print:- \n");
+	scanf("%d",&t);
+	printf("\n Enter the length you want:- \n");
+	scanf("%d",&l);
+	while(k<=l)
+	{
+		v=t*k;
+		printf("\n %d * %d   = %d",t,k,v);
+		k++;
+	}
+
+return 0;
+}
