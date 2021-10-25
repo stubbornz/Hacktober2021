@@ -1,0 +1,12 @@
+//find the area and circumfrance of circle
+
+#include<stdio.h>
+main()
+{
+	float radius,area,circumfrance;
+	printf("Enter the radius of circle to find area and circumfrance \n ");
+	scanf("%f",&radius);
+	area=3.14*radius*radius;
+	circumfrance=2*3.14*radius;
+	printf(" area is %1.2f \n circumfrance is %1.2f ",area,circumfrance);
+}
