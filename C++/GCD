@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+main()
+{
+   // Normal method
+   int a,b,n,i,gcd,c,d,r,temp,flag;
+   cout<<"Enter two numbers \n";
+   cin>>a>>b;
+   if(a>b)
+   {
+      n=b;
+   }
+   else
+   {
+      n=a;
+   }
+   for(i=1;i<=n;i++)
+   {
+      if(a%i==0 && b%i==0)
+      {
+          gcd=i;
+      }
+   }
+   cout<<"\nGcd of "<<a<<" and "<<b<<" is "<<gcd;
+   //Euclidean Algorithm method
+   cout<<"\n\nEnter two numbers \n";
+   cin>>c>>d;
+   temp=c;
+   flag=d;
+   while(d>0)
+   {
+      r=c%d;
+      c=d;
+      d=r;
+   }
+   cout<<"\nEuclidean Algorithm method";
+   cout<<"\n Gcd of "<<temp<<" and "<<flag<<" is "<<c;
+}
