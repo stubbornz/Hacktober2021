@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n,r=0,a,temp;
+	printf("Enter any number to find wheather it is a palindrome or not:- ");
+	scanf("%d",&n);
+	temp=n;
+	while(n>0)
+	{
+		a=n%10;
+		r=10*r+a;
+		n=n/10;
+	}
+	if(temp==r)
+	{
+		printf("\n The number is palindrome ");
+	}
+	else
+	{
+		printf("\n The number is not palindrome ");
+	}
+	return 0;
+}
