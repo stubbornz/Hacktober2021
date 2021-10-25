@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	printf("enter any two number to find the greater one a,b:- \n");
+	scanf("%d %d",&a,&b);
+	(a>b)?printf("\n Greater number is %d",a):printf("\n Greater number is %d",b);
+	return 0;
+}
