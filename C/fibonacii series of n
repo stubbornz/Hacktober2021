@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	//fibonacii series
+	
+	int a=1,b=1,c=0,n;
+	printf("Enter the upto which digit you want to print fibonacci series:- ");
+	scanf("%d",&n);
+	printf("\n%d,%d",a,b);
+	while(c<n)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		if(c<n)
+		{
+		
+		printf(",%d",c);
+		}
+	}
+	
+}
