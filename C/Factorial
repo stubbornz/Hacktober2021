@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	
+	//factorial of a number
+	
+	int fact=1,i,j,p;
+	printf("\n \nEnter any number to find factorial:-");
+	scanf("%d",&p);
+	for(i=1;i<=p;i++)
+	{
+		fact=fact*i;
+	}
+	printf("\nAnswer is:- %d",fact);
+	
+	
+}
