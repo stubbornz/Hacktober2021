@@ -1,3 +1,5 @@
+// The following code contains the program for Armstrong Number which determines whether the given number is Armstrong number or not.
+
 #include <iostream>  
 using namespace std;  
 int main()  
