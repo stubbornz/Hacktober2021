@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#616161"
+    tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/imageA"
+                android:layout_width="wrap_content"
+                android:layout_height="290dp"
+                android:layout_below="@+id/textviewB"
+                android:layout_centerHorizontal="true"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/image_of_the_sports_shop_or_sports_items"
+                android:src="@drawable/peeksportsa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2962FF"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <TextView
+                android:id="@+id/textviewA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:text="Sports Store"
+                android:textColor="#FFFF00"
+                android:textSize="36sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/textviewB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textviewA"
+                android:background="#FF0266"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageA"
+                android:layout_centerHorizontal="true"
+                android:background="#FFC107"
+                android:padding="20dp"
+                android:text="Get the best deals here with most exiting discound offers for you all."
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/football"
+                android:layout_width="145dp"
+                android:layout_height="140dp"
+                android:layout_below="@+id/quote"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/football"
+                android:contentDescription="Football Image" />
+
+            <TextView
+                android:id="@+id/textfoot"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/football"
+                android:text=" FIFA FooTBAll\n Price : $5.00 \n Rating: 4⭐ "
+                android:textSize="25sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="#b1006a"
+                android:layout_below="@+id/quote"
+                />
+
+            <ImageView
+                android:id="@+id/studs"
+                android:layout_width="145dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/football"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/nike"
+                android:contentDescription="Image of Studs" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/studs"
+                android:text=" Nike FooTBAll Shoes\n Price : $45.00 \n Rating: 5⭐ "
+                android:textSize="25sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="#42A5F5"
+                android:layout_below="@+id/textfoot"
+            />
+</RelativeLayout>
+</ScrollView>
