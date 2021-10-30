@@ -1,7 +1,8 @@
+//code for Fibonacci series
+
 #include<stdio.h>
 int main()
 {
-	//fibonacii series
 	
 	int a=1,b=1,c=0,n;
 	printf("Enter the upto which digit you want to print fibonacci series:- ");
