@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int A[20],i,j,k,n,temp;
+	cout<<"Enter number of elements"<<endl;
+	cin>>n;
+	
+	cout<<"Enter "<<n<<" integers:"<<endl;
+	for(i=0;i<n;i++)
+	cin>>A[i];
+	
+	for(i=0;i<n-1;i++)
+	{
+		for(j=k=i;j<n;j++)
+		{
+			if(A[j]<A[k])
+			 k=j;
+		}
+		temp = A[i];
+		A[i]=A[k];
+		A[k]=temp;
+	}
+	
+	cout<<"Sorted Elements are:"<<endl;
+	for(i=0;i<n;i++)
+	cout<<A[i]<<" ";
+}
