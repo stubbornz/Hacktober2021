@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Convert Numbers to Strings</title>
+</head>
+<body>
+    <script>
+    var x = 10;
+    var y = x.toString();
+    document.write(y);  // '10'
+    document.write(typeof y + "<br>");  // string
+    document.write(typeof x + "<br>");  // number
+    
+    document.write((12).toString() + "<br>");  // '12'
+    document.write((15.6).toString() + "<br>");  // '15.6'
+    document.write((6).toString(2) + "<br>");  // '110'
+    document.write((255).toString(16));  // 'ff'
+    </script>
+</body>
+</html>
